@@ -34,10 +34,10 @@ ________________
 ```
 
 - Inheritance is shown by a solid arrow from child to parent. 
-Example: An arrow from Dog --> Animal
+Example: An arrow from ```Dog --> Animal```
 - Composition is shown by an arrow from parent object to the object which is
-included in the parent. Example: An arrow from Employee --> Address
+included in the parent. Example: An arrow from ```Employee --> Address```
 - Abstract class names and abstract method names are shown in italics. Rest all other rules apply.
-- Interfaces are shown like classes but with a "<<interface>>" tag.
+- Interfaces are shown like classes but with a ```<<interface>>``` tag.
 - Relationship between interfaces & classes is shown in a similar way to inheritance except that 
 a dashed arrow is used. 
