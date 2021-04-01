@@ -25,3 +25,14 @@ can be imparted using the strategy pattern.
 - When the list of behaviours x1, x2, x3 can evolve dynamically.
 
 ### 2. Observer Pattern
+
+#### Definition
+The observer pattern is a design pattern in which an object(subject) maintains a list of its
+dependents(observers) and notifies them automatically of any state changes, usually by calling one of 
+their methods.
+
+#### Guidelines & Notes for pattern usage
+- When you need a lot of other objects of one or many classes to receive updates about the state
+change of some other object.
+- The publisher(subject) does not need to know anything about the subscriber(observer)
+- The subscribers may receive update about the state that they might not be interested in.
