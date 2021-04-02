@@ -36,3 +36,15 @@ their methods.
 change of some other object.
 - The publisher(subject) does not need to know anything about the subscriber(observer)
 - The subscribers may receive update about the state that they might not be interested in.
+
+### 3. Factory Pattern
+
+#### Definition
+The Factory pattern allows you to create objects without specifying the exact class of the object
+to create.
+
+#### Guidelines & Notes for pattern usage
+- When the objects to create are of classes that share a common parent class.
+- When you have to create object dynamically at runtime based on the flow invoked.
+- Helps to hide the logic of object creation. Each class is responsible for creating its own object
+- Helps to centralize the logic of object creation. All the if-else/switch lives together
