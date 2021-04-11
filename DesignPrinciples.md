@@ -48,3 +48,28 @@ to create.
 - When you have to create object dynamically at runtime based on the flow invoked.
 - Helps to hide the logic of object creation. Each class is responsible for creating its own object
 - Helps to centralize the logic of object creation. All the if-else/switch lives together
+
+### 4. Singleton Pattern
+
+#### Definition
+If you want that only one object of a class can ever be created, use this.
+
+#### Guidelines & Notes for pattern usage
+- Whenever you want to create a shared list/object that is accessible to all the other
+classes.
+- Make sure to make the singleton thread safe.
+
+### 5. Builder Pattern
+
+#### Definition
+Pattern used to create objects made from a bunch of other objects. Also, helps to hide the
+building logic (which can be complex) of parts of the object. 
+
+#### Guidelines & Notes for pattern usage
+- When you want to build an object made up of another object
+- When the creation logic of parts of the object is complex. You can hide all those details
+in the builders.
+
+### 6. Prototype Pattern
+
+#### Definition
