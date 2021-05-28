@@ -73,3 +73,7 @@ in the builders.
 ### 6. Prototype Pattern
 
 #### Definition
+Pattern is used to create new instances (clones) by cloning (copying) existing instances.
+
+#### Guidelines & Notes for pattern usage
+- 
