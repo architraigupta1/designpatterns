@@ -2,10 +2,8 @@ package com.archit.designpatterns.decorator;
 
 public class Whip extends CondimentDecorator {
 
-  private Beverage beverage;
-
   public Whip(Beverage beverage) {
-    this.beverage = beverage;
+    super(beverage);
   }
 
   @Override

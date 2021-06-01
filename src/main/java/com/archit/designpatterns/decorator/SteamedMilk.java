@@ -2,10 +2,8 @@ package com.archit.designpatterns.decorator;
 
 public class SteamedMilk extends CondimentDecorator {
 
-  private Beverage beverage;
-
   public SteamedMilk(Beverage beverage) {
-    this.beverage = beverage;
+    super(beverage);
   }
 
   @Override

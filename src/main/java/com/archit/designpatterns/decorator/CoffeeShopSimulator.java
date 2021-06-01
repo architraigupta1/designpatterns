@@ -13,10 +13,18 @@ public class CoffeeShopSimulator {
 //    Better way is to use re-use one object reference
     Beverage beverage = new HouseBlend();
     beverage = new Mocha(beverage);
-    beverage = new Mocha(beverage);
-    beverage = new Soy(beverage);
+//    beverage = new Mocha(beverage);
+//    beverage = new Soy(beverage);
     beverage = new Whip(beverage);
 
     System.out.println("Name: " + beverage.getDescription() + " Cost: " + beverage.getCost());
+
+    Beverage largeCup = new HouseBlend();
+    largeCup.setSize(Size.VENTI);
+    largeCup = new Whip(largeCup);
+    largeCup = new Mocha(largeCup);
+
+
+    System.out.println("Name: " + largeCup.getDescription() + " Cost: " + largeCup.getCost());
   }
 }
