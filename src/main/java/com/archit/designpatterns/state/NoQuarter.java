@@ -2,30 +2,24 @@ package com.archit.designpatterns.state;
 
 public class NoQuarter implements State {
 
-  private GumballMachine gumballMachine;
-
-  public NoQuarter(GumballMachine gumballMachine) {
-    this.gumballMachine = gumballMachine;
-  }
-
   @Override
-  public void insertQuarter() {
+  public void insertQuarter(GumballMachine gumballMachine) {
     System.out.println("Quarter inserted.");
-    gumballMachine.setCurrentState(gumballMachine.getHasQuarter());
+    gumballMachine.setCurrentState(StateMachine.hasQuarter);
   }
 
   @Override
-  public void ejectQuarter() {
+  public void ejectQuarter(GumballMachine gumballMachine) {
     System.out.println("No quarter present");
   }
 
   @Override
-  public void turnCrank() {
+  public void turnCrank(GumballMachine gumballMachine) {
     System.out.println("Please insert a quarter first");
   }
 
   @Override
-  public void dispense() {
+  public void dispense(GumballMachine gumballMachine) {
     System.out.println("Please insert a quarter first");
   }
 

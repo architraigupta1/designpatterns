@@ -2,37 +2,31 @@ package com.archit.designpatterns.state;
 
 public class Sold implements State {
 
-  private GumballMachine gumballMachine;
-
-  public Sold(GumballMachine gumballMachine) {
-    this.gumballMachine = gumballMachine;
-  }
-
   @Override
-  public void insertQuarter() {
+  public void insertQuarter(GumballMachine gumballMachine) {
     System.out.println("Dispensing in progress. Please wait");
   }
 
   @Override
-  public void ejectQuarter() {
+  public void ejectQuarter(GumballMachine gumballMachine) {
     System.out.println("Dispensing in progress. Cannot eject quarter now");
   }
 
   @Override
-  public void turnCrank() {
+  public void turnCrank(GumballMachine gumballMachine) {
     System.out.println("Dispensing in progress. Please wait");
   }
 
   @Override
-  public void dispense() {
+  public void dispense(GumballMachine gumballMachine) {
     System.out.println("Here is your gumball!!");
     int count = gumballMachine.getBalls();
     count = count - 1;
     gumballMachine.setBalls(count);
     if (count == 0) {
-      gumballMachine.setCurrentState(gumballMachine.getSoldOut());
+      gumballMachine.setCurrentState(StateMachine.soldOut);
     } else {
-      gumballMachine.setCurrentState(gumballMachine.getNoQuarter());
+      gumballMachine.setCurrentState(StateMachine.noQuarter);
     }
   }
 

@@ -2,31 +2,25 @@ package com.archit.designpatterns.state;
 
 public class HasQuarter implements State {
 
-  private GumballMachine gumballMachine;
-
-  public HasQuarter(GumballMachine gumballMachine) {
-    this.gumballMachine = gumballMachine;
-  }
-
   @Override
-  public void insertQuarter() {
+  public void insertQuarter(GumballMachine gumballMachine) {
     System.out.println("Quarter already inserted");
   }
 
   @Override
-  public void ejectQuarter() {
+  public void ejectQuarter(GumballMachine gumballMachine) {
     System.out.println("Quarter ejected");
-    gumballMachine.setCurrentState(gumballMachine.getNoQuarter());
+    gumballMachine.setCurrentState(StateMachine.noQuarter);
   }
 
   @Override
-  public void turnCrank() {
+  public void turnCrank(GumballMachine gumballMachine) {
     System.out.println("Dispensing a ball now");
-    gumballMachine.setCurrentState(gumballMachine.getSold());
+    gumballMachine.setCurrentState(StateMachine.sold);
   }
 
   @Override
-  public void dispense() {
+  public void dispense(GumballMachine gumballMachine) {
     System.out.println("Dispensing already in progress");
   }
 

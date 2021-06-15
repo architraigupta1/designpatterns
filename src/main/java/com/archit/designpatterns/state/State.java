@@ -2,12 +2,12 @@ package com.archit.designpatterns.state;
 
 public interface State {
 
-  void insertQuarter();
+  void insertQuarter(GumballMachine gumballMachine);
 
-  void ejectQuarter();
+  void ejectQuarter(GumballMachine gumballMachine);
 
-  void turnCrank();
+  void turnCrank(GumballMachine gumballMachine);
 
-  void dispense();
+  void dispense(GumballMachine gumballMachine);
 
 }

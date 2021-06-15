@@ -2,29 +2,23 @@ package com.archit.designpatterns.state;
 
 public class SoldOut implements State {
 
-  private GumballMachine gumballMachine;
-
-  public SoldOut(GumballMachine gumballMachine) {
-    this.gumballMachine = gumballMachine;
-  }
-
   @Override
-  public void insertQuarter() {
+  public void insertQuarter(GumballMachine gumballMachine) {
     System.out.println("There are no gumballs. Please wait");
   }
 
   @Override
-  public void ejectQuarter() {
+  public void ejectQuarter(GumballMachine gumballMachine) {
     System.out.println("You did not insert any quarter");
   }
 
   @Override
-  public void turnCrank() {
+  public void turnCrank(GumballMachine gumballMachine) {
     System.out.println("There are no gumballs. Please wait");
   }
 
   @Override
-  public void dispense() {
+  public void dispense(GumballMachine gumballMachine) {
     System.out.println("There are no gumballs. Please wait");
   }
 

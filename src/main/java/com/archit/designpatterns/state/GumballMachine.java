@@ -4,20 +4,12 @@ public class GumballMachine {
 
   private String name;
   private State currentState;
-  private State noQuarter = new NoQuarter(this);
-  private State hasQuarter = new HasQuarter(this);
-  private State sold = new Sold(this);
-  private State soldOut = new SoldOut(this);
   private int balls;
 
-  public GumballMachine(String name, int balls) {
+  public GumballMachine(String name, int balls, State currentState) {
     this.name = name;
-      this.balls = balls;
-      if (this.balls <= 0) {
-        this.currentState = soldOut;
-      } else {
-        this.currentState = noQuarter;
-      }
+    this.balls = balls;
+    this.currentState = currentState;
   }
 
   public String display() {
@@ -34,32 +26,16 @@ public class GumballMachine {
   }
 
   public void insertQuarter() {
-    currentState.insertQuarter();
+    currentState.insertQuarter(this);
   }
 
   public void ejectQuarter() {
-    currentState.ejectQuarter();
+    currentState.ejectQuarter(this);
   }
 
   public void turnCrank() {
-    currentState.turnCrank();
-    currentState.dispense();
-  }
-
-  public State getNoQuarter() {
-    return noQuarter;
-  }
-
-  public State getHasQuarter() {
-    return hasQuarter;
-  }
-
-  public State getSold() {
-    return sold;
-  }
-
-  public State getSoldOut() {
-    return soldOut;
+    currentState.turnCrank(this);
+    currentState.dispense(this);
   }
 
   public int getBalls() {
